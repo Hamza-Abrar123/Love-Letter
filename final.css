@@ -25,7 +25,8 @@ body{
 
 }
 
-/* Animated Background */
+
+/* Animated Hearts Background */
 
 body::before{
 
@@ -51,27 +52,26 @@ body::before{
 
 }
 
+
 @keyframes floatHearts{
 
     0%{
-
         transform:translateY(100%);
-
     }
 
     100%{
-
         transform:translateY(-120%);
-
     }
 
 }
 
+
+
 .container{
 
-    width:90px;
+    width:900px;
 
-    max-width:450%;
+    max-width:90%;
 
     padding:60px;
 
@@ -95,6 +95,8 @@ body::before{
 
 }
 
+
+
 h1{
 
     font-size:60px;
@@ -111,6 +113,8 @@ h1{
 
 }
 
+
+
 p{
 
     color:#f2f2f2;
@@ -123,6 +127,8 @@ p{
 
 }
 
+
+
 h2{
 
     margin-top:40px;
@@ -134,6 +140,8 @@ h2{
     text-shadow:0 0 20px hotpink;
 
 }
+
+
 
 button{
 
@@ -159,6 +167,8 @@ button{
 
 }
 
+
+
 button:hover{
 
     transform:scale(1.08);
@@ -173,11 +183,13 @@ button:hover{
 
 }
 
+
+
 a{
-
     text-decoration:none;
-
 }
+
+
 
 @keyframes fadeIn{
 
@@ -199,82 +211,48 @@ a{
 
 }
 
+
+
 @media(max-width:768px){
+
 
 .container{
 
-padding:35px;
+    width:95%;
+
+    padding:35px 20px;
 
 }
+
 
 h1{
 
-font-size:42px;
+    font-size:42px;
 
 }
+
 
 h2{
 
-font-size:28px;
+    font-size:28px;
 
 }
+
 
 p{
 
-font-size:18px;
+    font-size:18px;
 
-line-height:32px;
+    line-height:32px;
 
 }
+
 
 button{
 
-width:250px;
+    width:250px;
 
 }
 
-}
-@media screen and (max-width:768px){
-
-    body{
-        padding:15px;
-        overflow-x:hidden;
-    }
-
-    .container,
-    .story-container,
-    .card,
-    .letter-box{
-
-        width:95%;
-        max-width:420px;
-        height:auto;
-
-        margin:20px auto;
-    }
-
-    h1{
-        font-size:30px;
-    }
-
-    h2{
-        font-size:24px;
-    }
-
-    p{
-        font-size:16px;
-        line-height:28px;
-    }
-
-    button{
-        width:100%;
-        font-size:18px;
-        padding:15px;
-    }
-
-    img{
-        width:100%;
-        height:auto;
-    }
 
 }

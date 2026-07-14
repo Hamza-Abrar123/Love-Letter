@@ -17,25 +17,29 @@ const area = document.getElementById("typewriter");
 
 let i = 0;
 
-function type(){
+function type() {
 
-if(i < message.length){
+    if (i < message.length) {
 
-area.innerHTML += message.charAt(i);
-area.scrollTop = area.scrollHeight;
+        area.innerHTML += message.charAt(i);
+        area.scrollTop = area.scrollHeight;
 
-i++;
+        i++;
 
-setTimeout(type,45);
-
-}
+        setTimeout(type, 45);
+    }
 
 }
 
 type();
 
-document.getElementById("nextBtn").onclick = function(){
+document.getElementById("nextBtn").addEventListener("click", () => {
 
-window.location.href="reasons.html";
+    document.body.style.transition = "0.8s";
+    document.body.style.opacity = "0";
 
-}
+    setTimeout(() => {
+        window.location.href = "reasons.html";
+    }, 800);
+
+});

@@ -2,10 +2,10 @@ const yesBtn = document.getElementById("yes");
 const thinkBtn = document.getElementById("think");
 
 // YES Button
-yesBtn.addEventListener("click", function () {
+yesBtn.addEventListener("click", () => {
 
-    // Create overlay
     const overlay = document.createElement("div");
+
     overlay.style.position = "fixed";
     overlay.style.top = "0";
     overlay.style.left = "0";
@@ -18,8 +18,8 @@ yesBtn.addEventListener("click", function () {
     overlay.style.flexDirection = "column";
     overlay.style.zIndex = "9999";
 
-    // Message
     const message = document.createElement("h1");
+
     message.innerHTML = "❤️ Thank You Zainab ❤️<br><br>You made my day! 🌹";
     message.style.color = "white";
     message.style.textAlign = "center";
@@ -27,16 +27,14 @@ yesBtn.addEventListener("click", function () {
     message.style.fontSize = "45px";
 
     overlay.appendChild(message);
-
     document.body.appendChild(overlay);
 
     // Floating Hearts
     for (let i = 0; i < 70; i++) {
 
-        let heart = document.createElement("div");
+        const heart = document.createElement("div");
 
         heart.innerHTML = "❤️";
-
         heart.style.position = "fixed";
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.top = "100vh";
@@ -46,38 +44,38 @@ yesBtn.addEventListener("click", function () {
 
         document.body.appendChild(heart);
 
-        heart.animate([
+        heart.animate(
+            [
+                {
+                    transform: "translateY(0) rotate(0deg)",
+                    opacity: 1
+                },
+                {
+                    transform: `translateY(-${window.innerHeight + 200}px) rotate(720deg)`,
+                    opacity: 0
+                }
+            ],
             {
-                transform: "translateY(0px) rotate(0deg)",
-                opacity: 1
-            },
-            {
-                transform: `translateY(-${window.innerHeight + 200}px) rotate(720deg)`,
-                opacity: 0
+                duration: 3000 + Math.random() * 2000,
+                easing: "ease-out"
             }
-        ], {
-            duration: 3000 + Math.random() * 2000,
-            easing: "ease-out"
-        });
+        );
 
         setTimeout(() => {
             heart.remove();
         }, 5000);
     }
 
-    // Redirect to Final Page
     setTimeout(() => {
         window.location.href = "final.html";
     }, 4000);
 
 });
 
-
 // THINK Button
-thinkBtn.addEventListener("click", function () {
+thinkBtn.addEventListener("click", () => {
 
-    alert(
-`❤️ No Problem ❤️
+    alert(`❤️ No Problem ❤️
 
 Take your time.
 
@@ -85,7 +83,6 @@ I completely respect your decision.
 
 Thank you for reading my little website.
 
-😊`
-    );
+😊`);
 
 });
